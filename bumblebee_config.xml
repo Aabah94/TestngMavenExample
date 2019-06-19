@@ -12,4 +12,5 @@
   <alm_domain>SYSADMIN</alm_domain>
   <!-- HP ALM Project -->
   <alm_project>L2_SUPPORT</alm_project>
+  <test_plan>Subject\TestBumblebee</test_plan>
 </bumblebee>
