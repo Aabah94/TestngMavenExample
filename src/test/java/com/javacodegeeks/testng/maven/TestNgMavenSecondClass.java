@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import com.agiletestware.bumblebee.annotations.BooleanValue;
 import com.agiletestware.bumblebee.annotations.Bumblebee;
 
-@Bumblebee(testlab = "Root\\TestBumblebee1", testset = "TestBumblebee1", testplan = "Subject\\TestBumblebee1")
+@Bumblebee(testlab = "Root\\TestBumblebee2", testset = "TestBumblebee2", testplan = "Subject\\TestBumblebee2")
 public class TestNgMavenSecondClass {
 
 	@Test
