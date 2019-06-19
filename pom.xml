@@ -16,7 +16,24 @@
         		<version>0.0.8</version>
         		<scope>Bumblebee</scope>
     		</dependency>
-	</dependencies>
+	  		<dependency>
+			<groupId>com.agiletestware</groupId>
+			<artifactId>bumblebee-client</artifactId>
+			<version>0.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.9.5</version>
+			<scope>test</scope>
+		</dependency>
+</dependencies>
+<scm>
+		<connection>scm:git:ssh://github.com/jenkinsci/bumblebee-plugin.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/jenkinsci/bumblebee-plugin.git</developerConnection>
+		<url>https://github.com/jenkinsci/bumblebee-plugin</url>
+		<tag>HEAD</tag>
+</scm>
 <repositories>
 		<repository>
 			<id>repo.jenkins-ci.org</id>
@@ -31,7 +48,20 @@
 			<id>snapshot.agiletestware.com</id>
 			<url>http://public.maven.agiletestware.com.s3-website-us-west-2.amazonaws.com/snapshot</url>
 		</repository>	
-</repositories>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>repo.jenkins-ci.org</id>
+			<url>http://repo.jenkins-ci.org/public/</url>
+		</pluginRepository>
+	</pluginRepositories>
+	<distributionManagement>
+		<repository>
+			<id>repo.jenkins-ci.org</id>
+			<url>https://repo.jenkins-ci.org/releases</url>
+		</repository>
+	</distributionManagement>
+	<description>Integrates Jenkins with  HP ALM by automatically publishing test results from Jenkins to HP ALM using Bumblebee (http://www.agiletestware.com)</description>
 <build>
   <plugins>   
     <plugin>
@@ -47,6 +77,26 @@
           </properties>
         </configuration>
       </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<debug>true</debug>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.5.3</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.scm</groupId>
+						<artifactId>maven-scm-provider-gitexe</artifactId>
+						<version>1.8.1</version>
+					</dependency>
+				</dependencies>
+			</plugin>
   </plugins>
 </build>
 </project>
