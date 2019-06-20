@@ -4,10 +4,10 @@ import org.testng.annotations.Test;
 import com.agiletestware.bumblebee.annotations.BooleanValue;
 import com.agiletestware.bumblebee.annotations.Bumblebee;
 
-@Bumblebee(testname= "Tesng code2", testlab = "Root\\TestBumblebee", testset = "TestBumblebee", testplan = "Subject\\TestBumblebee")
+
 public class TestNgMavenExample {
 
-	@Bumblebee(testname = "Tesng code")
+	@Bumblebee(testname= "Tesng code2", testlab = "Root\\TestBumblebee", testset = "TestBumblebee", testplan = "Subject\\TestBumblebee")
 	@Test
 	public void exampleOfTestNgMaven() {
 		System.out.println("This is TestNG-Maven Example");
